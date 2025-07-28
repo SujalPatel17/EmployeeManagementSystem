@@ -1,16 +1,57 @@
-<<<<<<< HEAD
-# React + Vite
+# 🧑‍💼 Employee Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive Employee Management System built with **React.js**, **Tailwind CSS**, and **Vite**. It provides role-based dashboards for Admins and Employees with task management capabilities.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🔐 User Authentication (Admin & Employee)
+- 🧠 Context API for Global State (Auth & Tasks)
+- 🗂 Role-Based Dashboards
+- ✅ Task Management (New, Accepted, Completed, Failed)
+- ⚡ Fast Build with Vite
+- 🎨 Tailwind CSS Styling
+- 💾 Persistent Storage using localStorage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# EmployeeManagementSystem
->>>>>>> 41a453357af1e571d6397540a3e3c2a09f55ede3
+---
+
+## 📁 Folder Structure
+
+src/
+├── assets/ # Icons and images
+├── components/
+│ ├── Auth/ # Login screen
+│ ├── Dashboard/ # Admin & Employee dashboards
+│ ├── TaskList/ # Task status views
+│ └── common/ # Reusable components (Header, CreateTask, etc.)
+├── context/ # Auth and Task Context API
+├── utils/ # localStorage utilities
+├── App.jsx # Root component
+└── main.jsx # App entry point
+
+
+---
+
+## 🛠 Tech Stack
+
+- **React.js**
+- **Tailwind CSS**
+- **Vite**
+- **Context API**
+- **localStorage**
+
+---
+
+## 📦 Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/SujalPatel17/EmployeeManagementSystem.git
+cd EmployeeManagementSystem
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
