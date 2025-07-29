@@ -1,8 +1,16 @@
+//localStorage.clear()
 const employees = [
   {
     id: 1,
+    name: "Rahul Sharma",
     email: "employee1@example.com",
     password: "123",
+    taskStats: {
+      active: 2,
+      newTask: 1,
+      completed: 2,
+      failed: 0
+    },
     tasks: [
       {
         active: true,
@@ -38,8 +46,15 @@ const employees = [
   },
   {
     id: 2,
+    name: "Priya Verma",
     email: "employee2@example.com",
     password: "123",
+    taskStats: {
+      active: 0,
+      newTask: 1,
+      completed: 3,
+      failed: 1
+    },
     tasks: [
       {
         active: true,
@@ -75,8 +90,15 @@ const employees = [
   },
   {
     id: 3,
+    name: "Anjali Mehta",
     email: "employee3@example.com",
     password: "123",
+    taskStats: {
+      active: 4,
+      newTask: 0,
+      completed: 2,
+      failed: 2
+    },
     tasks: [
       {
         active: true,
@@ -122,8 +144,15 @@ const employees = [
   },
   {
     id: 4,
+    name: "Suresh Iyer",
     email: "employee4@example.com",
     password: "123",
+    taskStats: {
+      active: 5,
+      newTask: 0,
+      completed: 1,
+      failed: 2
+    },
     tasks: [
       {
         active: false,
@@ -159,8 +188,15 @@ const employees = [
   },
   {
     id: 5,
+    name: "Deepika Joshi",
     email: "employee5@example.com",
     password: "123",
+    taskStats: {
+      active: 8,
+      newTask: 0,
+      completed: 7,
+      failed: 0
+    },
     tasks: [
       {
         active: false,
@@ -199,10 +235,12 @@ const employees = [
 const admin = [
   {
     id: 1,
+    name: "Neeraj Patel",
     email: "admin@example.com",
     password: "123"
-     }
+  }
 ];
+
 
 export const setLocalStorage = ()=>{
     localStorage.setItem('employees',JSON.stringify(employees))
@@ -211,6 +249,7 @@ export const setLocalStorage = ()=>{
 export const getLocalStorage=()=>{
   const employees = JSON.parse(localStorage.getItem('employees'))
   const admin = JSON.parse(localStorage.getItem('admin'))
-  console.log(JSON.parse(data))
+  
+  return{employees,admin}
 }
 
