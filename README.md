@@ -7,7 +7,7 @@ A role-based task management web app built using **ReactJS**, where **Admins** c
 ---
 
 ## 🔗 Live Preview
-[Add your deployed link here if you host it on Vercel, Netlify, etc.]
+[https://employee-management-system-iota-livid.vercel.app/]
 
 ---
 
@@ -46,7 +46,6 @@ A role-based task management web app built using **ReactJS**, where **Admins** c
 ---
 
 ## 📂 Folder Structure
-
 src/
 │
 ├── components/
@@ -65,8 +64,6 @@ src/
 │
 ├── App.jsx
 └── index.js
-
-
 ---
 
 ## 🚀 Getting Started
