@@ -1,57 +1,121 @@
-# 🧑‍💼 Employee Management System
+# 🧑‍💼 Employee Task Management Dashboard
 
-A modern and responsive Employee Management System built with **React.js**, **Tailwind CSS**, and **Vite**. It provides role-based dashboards for Admins and Employees with task management capabilities.
+A role-based task management web app built using **ReactJS**, where **Admins** can assign tasks and **Employees** can manage and track their work progress.
 
----
-
-## 🚀 Features
-
-- 🔐 User Authentication (Admin & Employee)
-- 🧠 Context API for Global State (Auth & Tasks)
-- 🗂 Role-Based Dashboards
-- ✅ Task Management (New, Accepted, Completed, Failed)
-- ⚡ Fast Build with Vite
-- 🎨 Tailwind CSS Styling
-- 💾 Persistent Storage using localStorage
+> This is a fully frontend-based project using `localStorage` for persistence, making it fast and easy to test without backend setup.
 
 ---
 
-## 📁 Folder Structure
+## 🔗 Live Preview
+[Add your deployed link here if you host it on Vercel, Netlify, etc.]
+
+---
+
+## 📸 Screenshots
+
+<details>
+  <summary>Login Page</summary>
+  <img src="./screenshots/login.png" width="600"/>
+</details>
+
+<details>
+  <summary>Admin Dashboard</summary>
+  <img src="./screenshots/admin-dashboard.png" width="600"/>
+</details>
+
+<details>
+  <summary>Employee Dashboard</summary>
+  <img src="./screenshots/employee-dashboard.png" width="600"/>
+</details>
+
+---
+
+## ✨ Features
+
+- 🔐 **Role-based login**: Admin vs Employee
+- 📋 **Admin Panel**:
+  - View all employees
+  - Assign tasks to any employee
+- 👷 **Employee Dashboard**:
+  - See task stats (new, active, completed, failed)
+  - Accept and update task status
+- 💾 **LocalStorage based state**: No backend needed
+- 🔁 **Persistent login** with localStorage
+- 👨‍💻 Clean and modular code with reusable components
+
+---
+
+## 📂 Folder Structure
 
 src/
-├── assets/ # Icons and images
+│
 ├── components/
-│ ├── Auth/ # Login screen
-│ ├── Dashboard/ # Admin & Employee dashboards
-│ ├── TaskList/ # Task status views
-│ └── common/ # Reusable components (Header, CreateTask, etc.)
-├── context/ # Auth and Task Context API
-├── utils/ # localStorage utilities
-├── App.jsx # Root component
-└── main.jsx # App entry point
+│ ├── Auth/ # Login Component
+│ ├── Dashboard/
+│ │ ├── AdminDashboard.jsx
+│ │ └── EmployeeDashboard.jsx
+│ ├── TaskList/ # Task display for employee
+│ ├── common/ # Header, CreateTask, TaskNumber etc.
+│
+├── context/
+│ └── AuthProvider.jsx # Context API for global state
+│
+├── utils/
+│ └── localStorage.js # Handles setting/getting static employee/admin data
+│
+├── App.jsx
+└── index.js
 
 
 ---
 
-## 🛠 Tech Stack
+## 🚀 Getting Started
 
-- **React.js**
-- **Tailwind CSS**
-- **Vite**
-- **Context API**
-- **localStorage**
-
----
-
-## 📦 Installation
+### 1. Clone this repo
 
 ```bash
-# Clone the repo
-git clone https://github.com/SujalPatel17/EmployeeManagementSystem.git
-cd EmployeeManagementSystem
+git clone https://github.com/your-username/employee-task-manager.git
+cd employee-task-manager
 
-# Install dependencies
 npm install
 
-# Start development server
 npm run dev
+# or
+npm start
+
+👤 Default Users
+🔧 Admin
+Email: admin@gmail.com
+
+Password: 123
+
+👷 Employees (few samples)
+Email: employee1@example.com
+
+Password: 123
+
+Email: employee2@example.com
+
+Password: 123
+
+(You can view more in utils/localStorage.js)
+
+🛠️ Built With
+ReactJS
+
+TailwindCSS
+
+Vite (or Create React App if you used that)
+
+Context API
+
+localStorage
+
+📝 Future Improvements
+Backend integration (Node.js + MongoDB)
+
+Auth with JWT
+
+Task deadlines & reminders
+
+Better UI animations
