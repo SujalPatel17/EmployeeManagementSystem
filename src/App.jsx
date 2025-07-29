@@ -15,41 +15,43 @@ function App() {
   const [loggedInUSerData, setLoggedInUSerData] = useState(null)
   
   const authData = useContext(AuthContext) 
-  console.log(authData?.employees)
+  // console.log(authData?.employees)
 
-  // useEffect(() => {
-  //   if(authData){
-  //     const loggedInUser = localStorage.getItem("loggedInUser")
-  //     if(loggedInUser){
-  //       setUser(loggedInUser.role)
-  //     }
-  //   }
+  useEffect(()=>{
+    const loggedInUser = localStorage.getItem('loggedInUser')
 
-  // }, [authData]);
-  
+    if(loggedInUser){
+      const userData = JSON.parse(loggedInUser)
+      setUser(userData.role)
+      setLoggedInUSerData(userData.data)
+    }
+  },[])
   
 
   const handleLogin =(email,password) =>{
     if (email=='admin@gmail.com' && password == '123'){ 
       setUser('admin')
-      localStorage.setItem('loggedInUser',JSON.stringify({role:'admin'}))
-    }else if(authData){
-      const employee = authData.employees.find((e)=>email==e.email && e.password==password )
+      localStorage.setItem('loggedInUser',JSON.stringify({role:'admin'}));
+    } else {
+      const latestEmployees = JSON.parse(localStorage.getItem('employees')) || []
+      const employee = latestEmployees.find((e)=>email==e.email && e.password==password )
+
       if(employee){
         setUser('employee')
         setLoggedInUSerData(employee)
-        localStorage.setItem('loggedInUser',JSON.stringify({role:'employee'}))
-      }
-    }else{
-      alert("Invalid Credential")
+        localStorage.setItem('loggedInUser',JSON.stringify({role:'employee',data:employee })
+      );
+      }else{
+        alert("Invalid Credential")
     }
   }
+}
   
 
   return (
 <>
 {!user ? <Login handleLogin={handleLogin} />: ""}
-{ user == 'admin' ? <AdminDashboard/> : (user == 'employee' ?  <EmployeeDashboard data={loggedInUSerData} /> : null)}
+{ user == 'admin' ? <AdminDashboard changeUser={setUser} /> : (user == 'employee' ?  <EmployeeDashboard  changeUser={setUser} data={loggedInUSerData} /> : null)}
 {/* <EmployeeDashboard/> */}
 {/* <AdminDashboard/> */}
 

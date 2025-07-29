@@ -23,24 +23,34 @@ const employees = [
         category: "Design"
       },
       {
-        active: false,
+        active: true,
         newTask: false,
-        completed: true,
+        completed: false,
         failed: false,
-        taskTitle: "Client meeting",
-        taskDescription: "Discuss project requirements",
-        taskDate: "2024-10-10",
-        category: "Meeting"
+        taskTitle: "Prepare presentation",
+        taskDescription: "Client pitch slides",
+        taskDate: "2024-10-11",
+        category: "Presentation"
       },
       {
         active: false,
         newTask: false,
-        completed: false,
-        failed: true,
-        taskTitle: "Bug fixing",
-        taskDescription: "Resolve login page issue",
-        taskDate: "2024-10-08",
+        completed: true,
+        failed: false,
+        taskTitle: "Code Review",
+        taskDescription: "Review junior dev code",
+        taskDate: "2024-10-10",
         category: "Development"
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        taskTitle: "Project Planning",
+        taskDescription: "Plan Q4 roadmap",
+        taskDate: "2024-10-09",
+        category: "Planning"
       }
     ]
   },
@@ -50,19 +60,19 @@ const employees = [
     email: "employee2@example.com",
     password: "123",
     taskStats: {
-      active: 0,
-      newTask: 1,
-      completed: 3,
-      failed: 1
+      active: 1,
+      newTask: 0,
+      completed: 2,
+      failed: 0
     },
     tasks: [
       {
-        active: true,
+        active: false,
         newTask: true,
         completed: false,
         failed: false,
-        taskTitle: "Write documentation",
-        taskDescription: "Prepare user guide for version 2.0",
+        taskTitle: "Create user manual",
+        taskDescription: "Document all features",
         taskDate: "2024-10-13",
         category: "Documentation"
       },
@@ -71,20 +81,40 @@ const employees = [
         newTask: false,
         completed: true,
         failed: false,
-        taskTitle: "QA testing",
-        taskDescription: "Test all modules for bugs",
-        taskDate: "2024-10-11",
+        taskTitle: "Unit Testing",
+        taskDescription: "Write unit tests for modules",
+        taskDate: "2024-10-12",
         category: "QA"
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        taskTitle: "Client Feedback Review",
+        taskDescription: "Review support tickets",
+        taskDate: "2024-10-11",
+        category: "Support"
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        taskTitle: "Deploy Update",
+        taskDescription: "Push bugfix patch",
+        taskDate: "2024-10-10",
+        category: "DevOps"
       },
       {
         active: false,
         newTask: false,
         completed: false,
         failed: true,
-        taskTitle: "Deploy app",
-        taskDescription: "Push app to production server",
+        taskTitle: "Missed Call",
+        taskDescription: "Didn't attend client meeting",
         taskDate: "2024-10-09",
-        category: "Deployment"
+        category: "Meeting"
       }
     ]
   },
@@ -94,19 +124,19 @@ const employees = [
     email: "employee3@example.com",
     password: "123",
     taskStats: {
-      active: 4,
+      active: 1,
       newTask: 0,
       completed: 2,
-      failed: 2
+      failed: 0
     },
     tasks: [
       {
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false,
-        taskTitle: "Social media update",
-        taskDescription: "Post weekly news on LinkedIn",
+        taskTitle: "Campaign strategy",
+        taskDescription: "Plan holiday campaigns",
         taskDate: "2024-10-14",
         category: "Marketing"
       },
@@ -115,30 +145,20 @@ const employees = [
         newTask: false,
         completed: true,
         failed: false,
-        taskTitle: "Blog writing",
-        taskDescription: "Write October tech blog",
-        taskDate: "2024-10-12",
-        category: "Content"
+        taskTitle: "Content Writing",
+        taskDescription: "Blog on tech trends",
+        taskDate: "2024-10-10",
+        category: "Writing"
       },
       {
         active: false,
         newTask: false,
-        completed: false,
-        failed: true,
-        taskTitle: "Survey analysis",
-        taskDescription: "Analyze client feedback forms",
-        taskDate: "2024-10-10",
-        category: "Research"
-      },
-      {
-        active: true,
-        newTask: false,
-        completed: false,
+        completed: true,
         failed: false,
-        taskTitle: "SEO audit",
-        taskDescription: "Check on-page SEO scores",
-        taskDate: "2024-10-15",
-        category: "SEO"
+        taskTitle: "Video Script",
+        taskDescription: "Script for product teaser",
+        taskDate: "2024-10-09",
+        category: "Content"
       }
     ]
   },
@@ -148,41 +168,61 @@ const employees = [
     email: "employee4@example.com",
     password: "123",
     taskStats: {
-      active: 5,
+      active: 3,
       newTask: 0,
       completed: 1,
-      failed: 2
+      failed: 1
     },
     tasks: [
+      {
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+        taskTitle: "HR onboarding",
+        taskDescription: "Add new employees to system",
+        taskDate: "2024-10-14",
+        category: "HR"
+      },
+      {
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+        taskTitle: "Payroll Processing",
+        taskDescription: "Initiate payroll file",
+        taskDate: "2024-10-13",
+        category: "Finance"
+      },
+      {
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+        taskTitle: "Security Patch",
+        taskDescription: "Update firewall rules",
+        taskDate: "2024-10-12",
+        category: "IT"
+      },
       {
         active: false,
         newTask: false,
         completed: true,
         failed: false,
-        taskTitle: "Server maintenance",
-        taskDescription: "Check system logs and update firewall",
-        taskDate: "2024-10-10",
-        category: "IT"
-      },
-      {
-        active: true,
-        newTask: true,
-        completed: false,
-        failed: false,
-        taskTitle: "Employee onboarding",
-        taskDescription: "Prepare onboarding checklist",
-        taskDate: "2024-10-14",
-        category: "HR"
+        taskTitle: "Documentation",
+        taskDescription: "HR policies update",
+        taskDate: "2024-10-09",
+        category: "Admin"
       },
       {
         active: false,
         newTask: false,
         completed: false,
         failed: true,
-        taskTitle: "Email campaign",
-        taskDescription: "Create October email newsletter",
-        taskDate: "2024-10-12",
-        category: "Marketing"
+        taskTitle: "Missed Renewal",
+        taskDescription: "Forgot domain renewal",
+        taskDate: "2024-10-08",
+        category: "Web"
       }
     ]
   },
@@ -192,45 +232,57 @@ const employees = [
     email: "employee5@example.com",
     password: "123",
     taskStats: {
-      active: 8,
-      newTask: 0,
-      completed: 7,
+      active: 1,
+      newTask: 1,
+      completed: 2,
       failed: 0
     },
     tasks: [
-      {
-        active: false,
-        newTask: false,
-        completed: true,
-        failed: false,
-        taskTitle: "Sales report",
-        taskDescription: "Compile Q3 sales data",
-        taskDate: "2024-10-09",
-        category: "Sales"
-      },
       {
         active: true,
         newTask: true,
         completed: false,
         failed: false,
         taskTitle: "Market research",
-        taskDescription: "Research competitors’ pricing",
-        taskDate: "2024-10-13",
+        taskDescription: "Analyze competitors",
+        taskDate: "2024-10-14",
         category: "Research"
       },
       {
         active: false,
         newTask: false,
-        completed: false,
-        failed: true,
-        taskTitle: "Client call",
-        taskDescription: "Missed scheduled client follow-up",
-        taskDate: "2024-10-08",
+        completed: true,
+        failed: false,
+        taskTitle: "Customer Survey",
+        taskDescription: "Design new survey",
+        taskDate: "2024-10-13",
         category: "Support"
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        taskTitle: "Report creation",
+        taskDescription: "Prepare monthly report",
+        taskDate: "2024-10-12",
+        category: "Analytics"
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: false,
+        taskTitle: "Lead Conversion",
+        taskDescription: "Follow-up on warm leads",
+        taskDate: "2024-10-11",
+        category: "Sales"
       }
     ]
   }
 ];
+
+
 
 const admin = [
   {
