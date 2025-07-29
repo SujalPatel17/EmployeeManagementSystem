@@ -15,17 +15,17 @@ A role-based task management web app built using **ReactJS**, where **Admins** c
 
 <details>
   <summary>Login Page</summary>
-  <img src="./screenshots/login.png" width="600"/>
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c18e798a-b72c-42d2-94a9-47296ed3fbd8" />
 </details>
 
 <details>
   <summary>Admin Dashboard</summary>
-  <img src="./screenshots/admin-dashboard.png" width="600"/>
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/17903d69-978b-40b0-b0eb-a95cc75c6d81" />
 </details>
 
 <details>
   <summary>Employee Dashboard</summary>
-  <img src="./screenshots/employee-dashboard.png" width="600"/>
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dcc50849-c344-41ca-9782-ce836a2bad0f" />
 </details>
 
 ---
